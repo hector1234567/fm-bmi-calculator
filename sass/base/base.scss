@@ -1,0 +1,20 @@
+@use "colors" as c;
+@use "typography" as t;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: c.$White;
+  @include t.text-6;
+  color: c.$Grey-500;
+}
