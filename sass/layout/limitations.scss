@@ -1,0 +1,53 @@
+@use "../base/typography.scss" as t;
+@use "../base/colors.scss" as c;
+@use "../base/mixins.scss" as m;
+
+.limitations {
+  @include m.container;
+  margin: 10.4rem 0;
+  background-image: url(/assets/images/pattern-curved-line-right.svg);
+  background-size: 9.4rem 12.2rem;
+  background-repeat: no-repeat;
+  background-position: left 16.5rem top 25.1rem;
+
+  &__row {
+    display: flex;
+    gap: 3.2rem;
+    margin-bottom: 2.4rem;
+
+    &:first-child {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__header {
+    max-width: 56.4rem;
+
+    h2 {
+      @include t.text-2;
+      color: c.$Blue-900;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__card {
+    max-width: 36.5rem;
+
+    &--1 {
+      margin-left: auto;
+      margin-right: 9.9rem;
+    }
+
+    &--2 {
+      margin-left: auto;
+    }
+
+    &--4 {
+      margin-left: auto;
+    }
+
+    &--5 {
+      margin-right: auto;
+    }
+  }
+}

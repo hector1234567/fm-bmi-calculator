@@ -1,0 +1,36 @@
+@use "../base/typography.scss" as t;
+@use "../base/colors.scss" as c;
+@use "../base/mixins.scss" as m;
+
+.meaning {
+  @include m.container;
+
+  display: grid;
+  grid-template-columns: auto 46.5rem;
+  column-gap: 13.1rem;
+  padding: 5.2rem 0 8.6rem 0;
+  background-image: url(/assets/images/pattern-curved-line-left.svg);
+  background-position: top right 2.7rem;
+  background-repeat: no-repeat;
+  background-size: 8.5rem 20rem;
+
+  img {
+    width: 100%;
+  }
+
+  &__content {
+    align-self: flex-end;
+    margin-bottom: 4.3rem;
+  }
+
+  &__heading {
+    @include t.text-2;
+    color: c.$Blue-900;
+    margin-bottom: 3.2rem;
+  }
+
+  &_text {
+    @include t.text-6;
+    color: c.$Blue-500;
+  }
+}

@@ -1,0 +1,9 @@
+@use "../base/mixins.scss" as m;
+
+.articles {
+  @include m.container;
+  padding: 9.25rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3.2rem;
+}

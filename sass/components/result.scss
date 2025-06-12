@@ -1,0 +1,27 @@
+@use "../base/typography.scss" as t;
+@use "../base/colors.scss" as c;
+
+.result {
+  background-color: c.$Blue-500;
+  border-radius: 1.6rem 9rem 9rem 1.6rem;
+  padding: 3.2rem;
+  color: c.$White;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2.4rem;
+
+  &__bmi {
+    p {
+      @include t.text-6-semibold;
+    }
+
+    span {
+      @include t.text-1;
+    }
+  }
+
+  &__text {
+    @include t.text-7;
+    align-self: center;
+  }
+}

@@ -1,0 +1,17 @@
+@use "../base/typography.scss" as t;
+@use "../base/colors.scss" as c;
+@use "../base/mixins.scss" as m;
+
+.article {
+  figure {
+    display: flex;
+    height: 6.4rem;
+    margin-bottom: 4.8rem;
+  }
+
+  h2 {
+    @include t.text-4;
+    color: c.$Blue-900;
+    margin-bottom: 2.4rem;
+  }
+}

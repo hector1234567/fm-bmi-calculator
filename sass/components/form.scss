@@ -1,0 +1,76 @@
+@use "../base/typography.scss" as t;
+@use "../base/colors.scss" as c;
+@use "../base/mixins.scss" as m;
+
+.form {
+  &__group--radio {
+    input {
+      display: none;
+    }
+    label {
+      @include t.text-6-semibold;
+      color: c.$Blue-900;
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+
+    label::before {
+      content: "";
+      display: block;
+      width: 3.1rem;
+      height: 3.1rem;
+      border-radius: 99rem;
+      border: 0.13rem solid c.$Grey-500;
+    }
+
+    &:has(input:checked) {
+      label::before {
+        border: none;
+        background: radial-gradient(c.$Blue-500 39%, c.$Blue-100 41%);
+      }
+    }
+  }
+
+  &__group--number {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.8rem;
+
+    label {
+      @include t.text-7;
+      color: c.$Grey-500;
+      display: block;
+
+      &[for="height"] {
+        @include m.labelInnetTag;
+
+        &::after {
+          content: "cm";
+          @include t.text-4;
+          color: c.$Blue-500;
+        }
+      }
+
+      &[for="weight"] {
+        @include m.labelInnetTag;
+
+        &::after {
+          content: "kg";
+          @include t.text-4;
+          color: c.$Blue-500;
+        }
+      }
+    }
+
+    input {
+      @include t.text-4;
+      padding: 1.6rem;
+      border: 0.13rem solid c.$Grey-500;
+      border-radius: 1.2rem;
+      width: 100%;
+      position: relative;
+      padding-right: 8rem;
+    }
+  }
+}

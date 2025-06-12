@@ -1,0 +1,22 @@
+@use "../base/typography.scss" as t;
+@use "../base/colors.scss" as c;
+@use "../base/mixins.scss" as m;
+
+.card {
+  padding: 3.2rem;
+  border-radius: 1.6rem;
+  box-shadow: c.$Shadow;
+  background-color: c.$White;
+
+  img {
+    float: left;
+    height: 3.2rem;
+    margin-right: 1.6rem;
+  }
+
+  h3 {
+    @include t.text-5;
+    color: c.$Blue-900;
+    margin-bottom: 1.7rem;
+  }
+}

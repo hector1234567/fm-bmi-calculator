@@ -16,12 +16,12 @@
   </head>
   <body>
     <header>
-      <figure>
-        <img src="/assets/images/logo.svg" alt="Logo" />
-      </figure>
       <div class="hero">
+        <figure class="hero__logo">
+          <img src="/assets/images/logo.svg" alt="Logo" />
+        </figure>
         <div class="hero__content">
-          <h1 class="hero__heading">Body Mass Index Calculator</h1>
+          <h1 class="hero__heading">Body Mass<br />Index Calculator</h1>
           <p class="hero__text">
             Better understand your weight in relation to your height using our
             body mass index (BM) calculator. While BMI is not the sole
@@ -33,7 +33,13 @@
           <h2 class="calculator__heading">Enter your details below</h2>
           <form class="calculator__form">
             <div class="form__group form__group--radio">
-              <input type="radio" name="type" id="metric" value="metric" />
+              <input
+                type="radio"
+                name="type"
+                id="metric"
+                value="metric"
+                checked
+              />
               <label for="metric">Metric</label>
             </div>
             <div class="form__group form__group--radio">
@@ -114,53 +120,63 @@
         </article>
       </section>
       <section class="limitations">
-        <heading class="limitations__heading">
-          <h2>Limitations of BMI</h2>
-          <p>
-            Although BMI is often a practical indicator of healthy weight, it is
-            not suited for every person. Specific groups should carefully
-            consider their BMI outcomes, and in certain cases, the measurement
-            may not be beneficial to use.
-          </p>
-        </heading>
-        <div class="limitations__card card">
-          <h3>Gender</h3>
-          <p>
-            The development and body fat composition of girls and boys vary with
-            age. Consequently, a child's age and gender are considered when
-            evaluating their BMI.
-          </p>
+        <div class="limitations__row">
+          <div class="limitations__header">
+            <h2>Limitations of BMI</h2>
+            <p>
+              Although BMI is often a practical indicator of healthy weight, it
+              is not suited for every person. Specific groups should carefully
+              consider their BMI outcomes, and in certain cases, the measurement
+              may not be beneficial to use.
+            </p>
+          </div>
+          <div class="limitations__card card limitations__card--1">
+            <img src="/assets/images/icon-gender.svg" alt="Gender" />
+            <h3>Gender</h3>
+            <p>
+              The development and body fat composition of girls and boys vary
+              with age. Consequently, a child's age and gender are considered
+              when evaluating their BMI.
+            </p>
+          </div>
         </div>
-
-        <div class="limitations__card card card--1">
-          <h3>Age</h3>
-          <p>
-            In aging individuals, increased body fat and muscle loss may cause
-            BMI to underestimate body fat content.
-          </p>
+        <div class="limitations__row">
+          <div class="limitations__card card limitations__card--2">
+            <img src="/assets/images/icon-age.svg" alt="age" />
+            <h3>Age</h3>
+            <p>
+              In aging individuals, increased body fat and muscle loss may cause
+              BMI to underestimate body fat content.
+            </p>
+          </div>
+          <div class="limitations__card card limitations__card--3">
+            <img src="/assets/images/icon-muscle.svg" alt="muscle" />
+            <h3>Muscle</h3>
+            <p>
+              BMI may misclassify muscular individuals as overweight or obese,
+              as it doesn't differentiate muscle from fat.
+            </p>
+          </div>
         </div>
-        <div class="limitations__card card card--2">
-          <h3>Muscle</h3>
-          <p>
-            BMI may misclassify muscular individuals as overweight or obese, as
-            it doesn't differentiate muscle from fat.
-          </p>
-        </div>
-        <div class="limitations__card card card--3">
-          <h3>Pregnancy</h3>
-          <p>
-            Expectant mothers experience weight gain due to their growing baby.
-            Maintaining a healthy pre-pregnancy BMI is advisable to minimise
-            health risks for both mother and child.
-          </p>
-        </div>
-        <div class="limitations__card card card--4">
-          <h3>Race</h3>
-          <p>
-            Certain health concerns may affect individuals of some Black and
-            Asian origins at lower BMIs than others. To learn more, it is
-            advised to discuss this with your GP or practice nurse.
-          </p>
+        <div class="limitations__row">
+          <div class="limitations__card card limitations__card--4">
+            <img src="/assets/images/icon-pregnancy.svg" alt="pregnancy" />
+            <h3>Pregnancy</h3>
+            <p>
+              Expectant mothers experience weight gain due to their growing
+              baby. Maintaining a healthy pre-pregnancy BMI is advisable to
+              minimise health risks for both mother and child.
+            </p>
+          </div>
+          <div class="limitations__card card limitations__card--5">
+            <img src="/assets/images/icon-race.svg" alt="race" />
+            <h3>Race</h3>
+            <p>
+              Certain health concerns may affect individuals of some Black and
+              Asian origins at lower BMIs than others. To learn more, it is
+              advised to discuss this with your GP or practice nurse.
+            </p>
+          </div>
         </div>
       </section>
     </main>

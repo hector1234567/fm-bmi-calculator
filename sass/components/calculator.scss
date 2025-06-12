@@ -1,0 +1,23 @@
+@use "../base/typography.scss" as t;
+@use "../base/colors.scss" as c;
+
+.calculator {
+  background-color: c.$White;
+  padding: 3.2rem;
+  border-radius: 1.6rem;
+  box-shadow: c.$Shadow;
+
+  &__heading {
+    @include t.text-4;
+    color: c.$Blue-900;
+    margin-bottom: 3.2rem;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.4rem;
+    row-gap: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+}

@@ -18,3 +18,28 @@ body {
   @include t.text-6;
   color: c.$Grey-500;
 }
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: c.$Gradient-Blue-Right;
+    height: 100%;
+    width: calc(50% + 28.5rem);
+    border-radius: 0 0 3.5rem 3.5rem;
+    z-index: -1;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 4rem;
+}
