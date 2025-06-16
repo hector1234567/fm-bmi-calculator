@@ -73,4 +73,10 @@
       padding-right: 8rem;
     }
   }
+
+  @media (max-width: t.$Mobile) {
+    &__group--number {
+      grid-column: 1/-1;
+    }
+  }
 }

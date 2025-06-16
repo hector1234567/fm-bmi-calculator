@@ -28,4 +28,8 @@
       align-items: center;
     }
   }
+
+  @media (max-width: t.$Mobile) {
+    grid-template-columns: auto;
+  }
 }

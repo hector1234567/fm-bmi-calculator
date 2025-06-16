@@ -58,6 +58,7 @@
     gap: 1.6rem;
     margin: 0;
     padding: 9.6rem 3.9rem;
+    background-image: none;
 
     &__row {
       display: contents;
@@ -79,21 +80,19 @@
       max-width: calc(50% - 0.8rem);
 
       &--1 {
-        margin-left: 0;
         margin-right: 0;
-      }
-
-      &--2 {
-        margin-left: 0;
-      }
-
-      &--4 {
-        margin-left: 0;
       }
 
       &--5 {
         margin-right: 0;
       }
+    }
+  }
+
+  @media (max-width: t.$Mobile) {
+    padding: 8.2rem 1.9rem;
+    &__card {
+      max-width: 100%;
     }
   }
 }

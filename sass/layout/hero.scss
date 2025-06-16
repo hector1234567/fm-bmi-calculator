@@ -60,4 +60,9 @@
       max-width: 100%;
     }
   }
+
+  @media (max-width: t.$Mobile) {
+    margin: 3.2rem 2.4rem;
+    row-gap: 3.2rem;
+  }
 }

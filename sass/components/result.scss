@@ -32,4 +32,10 @@
       }
     }
   }
+
+  @media (max-width: t.$Mobile) {
+    grid-template-columns: 1fr;
+    row-gap: 2.4rem;
+    border-radius: 1.6rem;
+  }
 }

@@ -38,9 +38,25 @@
     grid-template-columns: 36.1rem auto;
     column-gap: 7.2rem;
     margin-left: -8rem;
+    background-image: none;
 
     &__heading {
       @include t.text-3;
+    }
+  }
+
+  @media (max-width: t.$Mobile) {
+    grid-template-columns: minmax(auto, 37.5rem);
+    row-gap: 4.8rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+
+    &__content {
+      align-self: flex-end;
+      margin-bottom: 4.3rem;
+      margin: 0 2.35rem;
+      width: auto;
     }
   }
 }
