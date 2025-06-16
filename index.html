@@ -11,8 +11,10 @@
       href="./assets/images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Body Mass Index Calculator</title>
+    <title>Body Mass Index Calculator | Hector BG</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="calculator.js"></script>
+    <script type="module" src="index.js"></script>
   </head>
   <body>
     <header>
@@ -31,7 +33,7 @@
         </div>
         <div class="hero__calculator calculator">
           <h2 class="calculator__heading">Enter your details below</h2>
-          <form class="calculator__form">
+          <form class="calculator__form form">
             <div class="form__group form__group--radio">
               <input
                 type="radio"
@@ -46,25 +48,40 @@
               <input type="radio" name="type" id="imperial" value="imperial" />
               <label for="imperial">Imperial</label>
             </div>
-            <div class="form__group form__group--number">
+            <!-- Metric -->
+            <div class="form__group form__group--number metric">
               <label for="height">Height</label>
-              <input type="number" name="height" id="height" />
+              <input type="number" name="height" id="height" placeholder="0" />
             </div>
-            <div class="form__group form__group--number">
+            <div class="form__group form__group--number metric">
               <label for="weight">Weight</label>
-              <input type="number" name="weight" id="weight" />
+              <input type="number" name="weight" id="weight" placeholder="0" />
+            </div>
+            <!-- Imperial -->
+            <div class="form__group form__group--number imperial">
+              <label for="feet">Height</label>
+              <input type="number" name="feet" id="feet" placeholder="0" />
+            </div>
+            <div class="form__group form__group--number imperial">
+              <label for="inches">&nbsp;</label>
+              <input type="number" name="inches" id="inches" placeholder="0" />
+            </div>
+            <div class="form__group form__group--number imperial">
+              <label for="stones">Weight</label>
+              <input type="number" name="stones" id="stones" placeholder="0" />
+            </div>
+            <div class="form__group form__group--number imperial">
+              <label for="libs">&nbsp;</label>
+              <input type="number" name="libs" id="libs" placeholder="0" />
             </div>
           </form>
           <div class="calculator__result result">
-            <div class="result__bmi">
-              <p>Your BMI is...</p>
-              <span>23.4</span>
+            <div class="result__empty">
+              <h3 class="result__heading">Welcome!</h3>
+              <p class="result__text">
+                Enter your height and weight and you’ll see your BMI result here
+              </p>
             </div>
-            <p class="result__text">
-              Your BMI suggests you're
-              <!-- add classification -->. Your ideal weight is between
-              <!-- add range -->.
-            </p>
           </div>
         </div>
       </div>

@@ -20,6 +20,15 @@
     }
   }
 
+  &__empty {
+    grid-column: 1 / -1;
+  }
+
+  &__heading {
+    @include t.text-4;
+    margin-bottom: 1.6rem;
+  }
+
   &__text {
     @include t.text-7;
     align-self: center;

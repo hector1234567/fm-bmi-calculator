@@ -7,21 +7,27 @@
     input {
       display: none;
     }
+
     label {
       @include t.text-6-semibold;
       color: c.$Blue-900;
       display: flex;
       align-items: center;
       gap: 1.6rem;
-    }
+      cursor: pointer;
 
-    label::before {
-      content: "";
-      display: block;
-      width: 3.1rem;
-      height: 3.1rem;
-      border-radius: 99rem;
-      border: 0.13rem solid c.$Grey-500;
+      &::before {
+        content: "";
+        display: block;
+        width: 3.1rem;
+        height: 3.1rem;
+        border-radius: 99rem;
+        border: 0.13rem solid c.$Grey-500;
+      }
+
+      &:hover::before {
+        border: 0.15rem solid c.$Blue-500;
+      }
     }
 
     &:has(input:checked) {
@@ -61,6 +67,46 @@
           color: c.$Blue-500;
         }
       }
+
+      &[for="feet"] {
+        @include m.labelInnetTag;
+
+        &::after {
+          content: "ft";
+          @include t.text-4;
+          color: c.$Blue-500;
+        }
+      }
+
+      &[for="inches"] {
+        @include m.labelInnetTag;
+
+        &::after {
+          content: "in";
+          @include t.text-4;
+          color: c.$Blue-500;
+        }
+      }
+
+      &[for="stones"] {
+        @include m.labelInnetTag;
+
+        &::after {
+          content: "st";
+          @include t.text-4;
+          color: c.$Blue-500;
+        }
+      }
+
+      &[for="libs"] {
+        @include m.labelInnetTag;
+
+        &::after {
+          content: "lbs";
+          @include t.text-4;
+          color: c.$Blue-500;
+        }
+      }
     }
 
     input {
@@ -71,11 +117,40 @@
       width: 100%;
       position: relative;
       padding-right: 8rem;
+
+      &:hover {
+        border: 0.15rem solid c.$Blue-500;
+      }
+
+      &:focus-visible {
+        outline: none;
+        border: 0.15rem solid c.$Blue-500;
+      }
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
     }
   }
 
+  &:has(#metric:checked) .imperial {
+    display: none !important;
+  }
+
+  &:has(#imperial:checked) .metric {
+    display: none !important;
+  }
+
   @media (max-width: t.$Mobile) {
-    &__group--number {
+    &__group--number.metric {
       grid-column: 1/-1;
     }
   }
