@@ -15,11 +15,11 @@ export class Calculator {
   }
 
   setHeightImperial(feet, inches) {
-    this.metters = 0.3048 * feet + 0.0254 * inches;
+    this._height = 0.3048 * feet + 0.0254 * inches;
   }
 
   setWeightImperial(stones, libs) {
-    this.kilograms = 6.350293 * stones + 0.453592 * libs;
+    this._weight = 6.350293 * stones + 0.453592 * libs;
   }
 
   renderResult() {
