@@ -4,19 +4,8 @@ const form = document.querySelector(".calculator__form");
 
 const calculator = new Calculator(document.querySelector(".calculator"));
 
-function handleSubmit(ev) {
-  ev.preventDefault();
-
-  const formArr = new FormData(form);
-  const formObj = {};
-  formArr.entries().forEach(([name, value]) => {
-    formObj[name] = value;
-  });
-  calculateBodyMass(formObj);
-}
-
-function calculateBodyMass(formObj) {
-  const { type, height, weight, feet, inches, stones, libs } = formObj;
+function calculateBodyMass(data) {
+  const { type, height, weight, feet, inches, stones, libs } = data;
 
   if (type === "imperial") {
     if (!(feet && inches && stones && libs)) {
@@ -36,4 +25,13 @@ function calculateBodyMass(formObj) {
   calculator.renderResult();
 }
 
-form.addEventListener("input", handleSubmit);
+function handleInput() {
+  const formArr = new FormData(form);
+  const formObj = {};
+  formArr.entries().forEach(([name, value]) => {
+    formObj[name] = value;
+  });
+  calculateBodyMass(formObj);
+}
+
+form.addEventListener("input", handleInput);
