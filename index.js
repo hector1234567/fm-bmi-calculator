@@ -1,8 +1,9 @@
 import { Calculator } from "./calculator.js";
 
-const form = document.querySelector(".calculator__form");
+const calculatorEl = document.querySelector(".calculator");
+const formEl = calculatorEl.querySelector("form");
 
-const calculator = new Calculator(document.querySelector(".calculator"));
+const calculator = new Calculator(calculatorEl);
 
 function calculateBodyMass(data) {
   const { type, height, weight, feet, inches, stones, libs } = data;
@@ -26,7 +27,7 @@ function calculateBodyMass(data) {
 }
 
 function handleInput() {
-  const formArr = new FormData(form);
+  const formArr = new FormData(formEl);
   const formObj = {};
   formArr.entries().forEach(([name, value]) => {
     formObj[name] = value;
@@ -34,4 +35,4 @@ function handleInput() {
   calculateBodyMass(formObj);
 }
 
-form.addEventListener("input", handleInput);
+formEl.addEventListener("input", handleInput);
