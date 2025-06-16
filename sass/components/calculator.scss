@@ -20,4 +20,10 @@
     row-gap: 3.2rem;
     margin-bottom: 3.2rem;
   }
+
+  @media (max-width: t.$Tablet) {
+    max-width: 68.6rem;
+    justify-self: center;
+    text-align: start;
+  }
 }

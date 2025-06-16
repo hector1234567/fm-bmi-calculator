@@ -16,7 +16,6 @@
 
     img {
       width: 6.4rem;
-      height: 6.4rem;
     }
   }
 
@@ -32,5 +31,33 @@
 
   &__text {
     max-width: 46.5rem;
+  }
+
+  @media (max-width: t.$Tablet) {
+    grid-template-columns: auto;
+    text-align: center;
+    margin: 3.2rem 4rem 8.8rem 4rem;
+    row-gap: 4rem;
+
+    &__logo {
+      justify-content: center;
+
+      img {
+        width: 4rem;
+      }
+    }
+
+    &__content {
+      padding-top: 0;
+    }
+
+    &__heading {
+      @include t.text-2;
+      margin-bottom: 2.4rem;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
   }
 }

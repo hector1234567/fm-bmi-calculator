@@ -24,4 +24,12 @@
     @include t.text-7;
     align-self: center;
   }
+
+  @media (max-width: t.$Tablet) {
+    &__bmi {
+      span {
+        @include t.text-2;
+      }
+    }
+  }
 }

@@ -3,6 +3,9 @@
 @use "../base/mixins.scss" as m;
 
 .article {
+  display: grid;
+  grid-template-columns: 1fr;
+
   figure {
     display: flex;
     height: 6.4rem;
@@ -13,5 +16,16 @@
     @include t.text-4;
     color: c.$Blue-900;
     margin-bottom: 2.4rem;
+  }
+
+  @media (max-width: t.$Tablet) {
+    grid-template-columns: min-content auto;
+    column-gap: 4rem;
+
+    figure {
+      grid-row: 1/3;
+      height: 100%;
+      align-items: center;
+    }
   }
 }

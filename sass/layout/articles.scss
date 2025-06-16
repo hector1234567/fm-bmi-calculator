@@ -1,4 +1,6 @@
 @use "../base/mixins.scss" as m;
+@use "../base/colors.scss" as c;
+@use "../base/typography.scss" as t;
 
 .articles {
   @include m.container;
@@ -6,4 +8,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 3.2rem;
+  background-image: c.$Gradient-Blue-Right-transparent;
+  border-radius: 3.5rem;
+
+  @media (max-width: t.$Tablet) {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+    padding: 5rem 3.9rem;
+    border-radius: 0;
+  }
 }

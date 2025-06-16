@@ -12,4 +12,10 @@ $Blue-900: #253347;
 $Gradient-Blue-Right: linear-gradient(to right, #d6fcfe00 0%, #d6e6fe 100%);
 $Gradient-Blue-Left: linear-gradient(to left, #d6fcfe00 0%, #d6e6fe 100%);
 
+$Gradient-Blue-Right-transparent: linear-gradient(
+  to right,
+  #d6fcfe00 0%,
+  hsla(216, 95%, 92%, 0.25) 100%
+);
+
 $Shadow: 1.6rem 3.2rem 5.6rem 0 rgba(143, 174, 207, 0.25);

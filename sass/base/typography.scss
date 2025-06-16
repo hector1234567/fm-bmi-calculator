@@ -7,6 +7,8 @@ $Regular: 400;
 $Semi-bold: 600;
 $Bold: 700;
 
+$Tablet: 1021px;
+
 @mixin text-1 {
   font-family: "Inter", serif;
   font-weight: $Semi-bold;

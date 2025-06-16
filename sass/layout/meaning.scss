@@ -33,4 +33,14 @@
     @include t.text-6;
     color: c.$Blue-500;
   }
+
+  @media (max-width: t.$Tablet) {
+    grid-template-columns: 36.1rem auto;
+    column-gap: 7.2rem;
+    margin-left: -8rem;
+
+    &__heading {
+      @include t.text-3;
+    }
+  }
 }
