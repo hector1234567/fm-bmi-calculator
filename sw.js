@@ -22,6 +22,11 @@ self.addEventListener("install", function (event) {
         "/assets/images/logo.svg",
         "/assets/images/pattern-curved-line-left.svg",
         "/assets/images/pattern-curved-line-right.svg",
+        "/assets/images/favicon-128x128.png",
+        "/assets/images/favicon-256x256.png",
+        "/assets/images/favicon-32x32.png",
+        "/assets/images/favicon-512x512.png",
+        "/assets/images/favicon-64x64.png",
       ]);
     })
   );

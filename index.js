@@ -28,8 +28,3 @@ function handleInput() {
 }
 
 formEl.addEventListener("input", handleInput);
-
-// Service Worker for Static Cache
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/sw.js");
-}
