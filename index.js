@@ -9,17 +9,9 @@ function calculateBodyMass(data) {
   const { type, height, weight, feet, inches, stones, libs } = data;
 
   if (type === "imperial") {
-    if (!(feet && inches && stones && libs)) {
-      return calculator.renderEmpty();
-    }
-
     calculator.setHeightImperial(feet, inches);
     calculator.setWeightImperial(stones, libs);
   } else {
-    if (!(height && weight)) {
-      return calculator.renderEmpty();
-    }
-
     calculator.centimeters = height;
     calculator.kilograms = weight;
   }

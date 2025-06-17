@@ -23,19 +23,14 @@ export class Calculator {
   }
 
   renderResult() {
-    const bmi = this._weight / (this._height * this._height);
-    this.parentEl.querySelector(".result").innerHTML = this.getMarkup(bmi);
-  }
+    const resultEl = this.parentEl.querySelector(".result");
 
-  renderEmpty() {
-    this.parentEl.querySelector(".result").innerHTML = `
-        <div class="result__empty">
-            <h3 class="result__heading">Welcome!</h3>
-            <p class="result__text">
-            Enter your height and weight and you’ll see your BMI result here
-            </p>
-        </div>
-    `;
+    if (!this._height || !this._weight) {
+      resultEl.innerHTML = this.getEmptyMarkup();
+    } else {
+      const bmi = this._weight / (this._height * this._height);
+      resultEl.innerHTML = this.getResultMarkup(bmi);
+    }
   }
 
   getClasification(bmi) {
@@ -57,7 +52,7 @@ export class Calculator {
     };
   }
 
-  getMarkup(bmi) {
+  getResultMarkup(bmi) {
     const roundedBmi = (Math.round(bmi * 10) / 10).toFixed(1);
     return `
         <div class="result__bmi">
@@ -69,6 +64,17 @@ export class Calculator {
             ${this.getClasification(roundedBmi)}. Your ideal weight is between
             <strong>${this.idealWeight.min} - ${this.idealWeight.max}</strong>.
         </p>
+    `;
+  }
+
+  getEmptyMarkup() {
+    return `
+        <div class="result__empty">
+            <h3 class="result__heading">Welcome!</h3>
+            <p class="result__text">
+            Enter your height and weight and you’ll see your BMI result here
+            </p>
+        </div>
     `;
   }
 }
