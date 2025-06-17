@@ -1,0 +1,39 @@
+{
+  "name": "Body Mass Index Calculator",
+  "short_name": "BMI",
+  "icons": [
+    {
+      "src": "/assets/images/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/assets/images/favicon-64x64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "/assets/images/favicon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/assets/images/favicon-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/assets/images/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#345ff6",
+  "theme_color": "#b3d3f1",
+  "description": "Body Mass Index Calculator",
+  "dir": "ltr",
+  "lang": "en-US"
+}
