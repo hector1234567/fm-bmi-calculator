@@ -7,6 +7,7 @@ self.addEventListener("install", function (event) {
         "/calculator.js",
         "/index.js",
         "/css/styles.css",
+        "/manifest.json",
         "/assets/fonts/Inter-VariableFont_slnt,wght.ttf",
         "/assets/fonts/static/Inter-Regular.ttf",
         "/assets/fonts/static/Inter-SemiBold.ttf",
